@@ -276,7 +276,7 @@ const scrollToSection = (id: string) => {
 
         <div
           className="fb-page"
-          data-href="https://www.facebook.com/happycatspagrooming"
+          data-href="https://www.facebook.com/Happycatspagroomingdogcare/"
           data-tabs="timeline"
           data-width="500"
           data-height="750"
@@ -286,10 +286,10 @@ const scrollToSection = (id: string) => {
           data-show-facepile="true"
         >
           <blockquote
-            cite="https://www.facebook.com/happycatspagrooming"
+            cite="https://www.facebook.com/Happycatspagroomingdogcare/"
             className="fb-xfbml-parse-ignore"
           >
-            <a href="https://www.facebook.com/happycatspagrooming">
+            <a href="https://www.facebook.com/Happycatspagroomingdogcare/">
               Happy Cat Spa Grooming
             </a>
           </blockquote>
@@ -523,7 +523,7 @@ const scrollToSection = (id: string) => {
 
   {/* Facebook */}
   <a
-    href="https://www.facebook.com/happycatspagrooming"
+    href="https://www.facebook.com/Happycatspagroomingdogcare/"
     target="_blank"
     className="w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center shadow-xl hover:scale-110 transition"
   >
