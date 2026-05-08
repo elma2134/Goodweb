@@ -254,7 +254,7 @@ const scrollToSection = (id: string) => {
         </div>
       </section>
 
-     {/* Facebook Latest Posts */}
+    {/* Facebook Latest Posts */}
 <section
   id="gallery"
   className="py-20 bg-gradient-to-br from-purple-50 to-pink-50"
@@ -272,30 +272,37 @@ const scrollToSection = (id: string) => {
     </div>
 
     <div className="flex justify-center">
-      <div className="bg-white rounded-[32px] shadow-2xl p-4 md:p-6 overflow-hidden">
+      
+      {/* CARD */}
+      <div className="w-full max-w-[1200px] bg-white rounded-[36px] shadow-[0_20px_80px_rgba(0,0,0,0.12)] p-4 md:p-8 overflow-hidden border border-pink-100">
 
-        <div
-          className="fb-page"
-          data-href="https://www.facebook.com/Happygroomingspa/"
-          data-tabs="timeline"
-          data-width="1300"
-          data-height="750"
-          data-small-header="false"
-          data-adapt-container-width="true"
-          data-hide-cover="false"
-          data-show-facepile="true"
-        >
-          <blockquote
-            cite="https://www.facebook.com/Happygroomingspa/"
-            className="fb-xfbml-parse-ignore"
+        {/* FACEBOOK */}
+        <div className="w-full flex justify-center">
+
+          <div
+            className="fb-page"
+            data-href="https://www.facebook.com/Happygroomingspa/"
+            data-tabs="timeline"
+            data-width="1100"
+            data-height="720"
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
           >
-            <a href="https://www.facebook.com/Happygroomingspa/">
-              Happy Cat Spa Grooming
-            </a>
-          </blockquote>
-        </div>
+            <blockquote
+              cite="https://www.facebook.com/Happygroomingspa/"
+              className="fb-xfbml-parse-ignore"
+            >
+              <a href="https://www.facebook.com/Happygroomingspa/">
+                Happy Cat Spa Grooming
+              </a>
+            </blockquote>
+          </div>
 
+        </div>
       </div>
+
     </div>
   </div>
 </section>
