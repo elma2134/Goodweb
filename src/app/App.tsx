@@ -127,7 +127,6 @@ const scrollToSection = (id: string) => {
                 Happy Spa Grooming Dog&Cat
               </span>
             </div>
-            ```tsx
 <div className="hidden md:flex">
   <div className="relative flex items-center bg-white/80 backdrop-blur-xl p-2 rounded-full shadow-lg border border-pink-100">
 
@@ -165,8 +164,6 @@ const scrollToSection = (id: string) => {
     ))}
   </div>
 </div>
-```
-
 
       {/* Hero Section */}
       <section className="pt-16 min-h-screen relative overflow-hidden">
