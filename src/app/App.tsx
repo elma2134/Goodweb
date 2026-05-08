@@ -254,32 +254,32 @@ const scrollToSection = (id: string) => {
         </div>
       </section>
 
-     {/* Facebook Section */}
+     {/* Facebook Latest Posts */}
 <section
   id="gallery"
   className="py-20 bg-gradient-to-br from-purple-50 to-pink-50"
 >
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
+
     <div className="text-center mb-16">
       <h2 className="text-4xl md:text-5xl font-bold mb-4">
-        ติดตามผลงานล่าสุด
+        ผลงานล่าสุดหน้าเพจ
       </h2>
 
       <p className="text-xl text-gray-600">
-        อัปเดตผลงาน รีวิว และโปรโมชั่นผ่าน Facebook Page
+        ดูผลงาน รีวิว และอัปเดตล่าสุดจาก Facebook Page
       </p>
     </div>
 
     <div className="flex justify-center">
-      <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden p-4">
-        
+      <div className="bg-white rounded-[32px] shadow-2xl p-4 md:p-6 overflow-hidden">
+
         <div
-          className="fb-page w-full"
+          className="fb-page"
           data-href="https://www.facebook.com/happycatspagrooming"
           data-tabs="timeline"
-          data-width="1000"
-          data-height="700"
+          data-width="500"
+          data-height="750"
           data-small-header="false"
           data-adapt-container-width="true"
           data-hide-cover="false"
