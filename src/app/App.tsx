@@ -175,8 +175,8 @@ const scrollToSection = (id: string) => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                ร้าน
-                <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"> Happy Spa</span>
+                Happy
+                <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"> Grooming spa Dog&Cat</span>
               </h1>
               <p className="text-xl text-gray-600">
                 บริการอาบน้ำ ตัดขน สปา สำหรับสุนัขและแมว ด้วยความใส่ใจและมาตรฐานระดับพรีเมียม
@@ -201,7 +201,7 @@ const scrollToSection = (id: string) => {
                   <div className="text-gray-600">น้องๆที่ไว้วางใจ</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-500">15+</div>
+                  <div className="text-3xl font-bold text-pink-500">10+</div>
                   <div className="text-gray-600">ปีของประสบการณ์</div>
                 </div>
                 <div className="text-center">
