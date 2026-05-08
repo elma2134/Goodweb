@@ -37,11 +37,13 @@ const [activeMenu, setActiveMenu] = useState('booking');
       description: 'บริการไถขนสั้น พร้อมดูแลสุขภาพผิวหนัง',
       features: ['อาบน้ำ-ไถขน','ไถสั้นก็น่ารักได้','โดยสัตวแพทย์ด้านผิวหนัง']
     },
-    price    icon: <Scissors className="w-8 h-8" />,
+    {
+      icon: <Scissors className="w-8 h-8" />,
       title: 'อาบน้ำ - ตัดขนทรงสวย',
       price: 'เริ่มต้น 500 บาท',
       description: 'บริการตัดขนแบบครบวงจร ทั้งอาบน้ำและตัดทรงตามสายพันธุ์',
       features: ['มีบริการรับส่ง','ไถเท้าท้องก้น','ตัดทรงตามสายพันธุ์']
+},
   ];
 
   const galleryImages = [
