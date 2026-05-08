@@ -257,10 +257,11 @@ const scrollToSection = (id: string) => {
     {/* Facebook Latest Posts */}
 <section
   id="gallery"
-  className="py-20 bg-gradient-to-br from-purple-50 to-pink-50"
+  className="py-20 bg-gradient-to-br from-purple-50 to-pink-50 overflow-hidden"
 >
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+    {/* TITLE */}
     <div className="text-center mb-16">
       <h2 className="text-4xl md:text-5xl font-bold mb-4">
         ผลงานล่าสุดหน้าเพจ
@@ -271,40 +272,83 @@ const scrollToSection = (id: string) => {
       </p>
     </div>
 
+    {/* CARD */}
     <div className="flex justify-center">
-      
-      {/* CARD */}
-      <div className="w-full max-w-[1200px] bg-white rounded-[36px] shadow-[0_20px_80px_rgba(0,0,0,0.12)] p-4 md:p-8 overflow-hidden border border-pink-100">
 
-        {/* FACEBOOK */}
-        <div className="w-full flex justify-center">
+      <div className="
+        w-full
+        max-w-[1200px]
+        bg-white/90
+        backdrop-blur-xl
+        rounded-[36px]
+        shadow-[0_20px_80px_rgba(0,0,0,0.12)]
+        border border-pink-100
+        overflow-hidden
+        p-3 md:p-6
+      ">
 
-          <div
-            className="fb-page"
-            data-href="https://www.facebook.com/Happygroomingspa/"
-            data-tabs="timeline"
-            data-width="1100"
-            data-height="720"
-            data-small-header="false"
-            data-adapt-container-width="true"
-            data-hide-cover="false"
-            data-show-facepile="true"
-          >
-            <blockquote
-              cite="https://www.facebook.com/Happygroomingspa/"
-              className="fb-xfbml-parse-ignore"
+        {/* Responsive Facebook */}
+        <div className="w-full overflow-hidden rounded-[28px]">
+
+          <div className="flex justify-center">
+
+            <div
+              className="
+                fb-page
+                w-full
+              "
+              data-href="https://www.facebook.com/Happygroomingspa/"
+              data-tabs="timeline"
+              data-width=""
+              data-height="720"
+              data-small-header="false"
+              data-adapt-container-width="true"
+              data-hide-cover="false"
+              data-show-facepile="true"
             >
-              <a href="https://www.facebook.com/Happygroomingspa/">
-                Happy Cat Spa Grooming
-              </a>
-            </blockquote>
+              <blockquote
+                cite="https://www.facebook.com/Happygroomingspa/"
+                className="fb-xfbml-parse-ignore"
+              >
+                <a href="https://www.facebook.com/Happygroomingspa/">
+                  Happy Cat Spa Grooming
+                </a>
+              </blockquote>
+            </div>
+
           </div>
 
         </div>
+
       </div>
 
     </div>
   </div>
+
+  {/* FIX FACEBOOK RESPONSIVE */}
+  <style jsx>{`
+    .fb-page,
+    .fb-page span,
+    .fb-page iframe {
+      width: 100% !important;
+    }
+
+    .fb-page iframe {
+      border-radius: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .fb-page {
+        min-height: 500px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .fb-page {
+        max-width: 1100px;
+      }
+    }
+  `}</style>
 </section>
 
       {/* Testimonials Section */}
