@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Scissors, Sparkles, Heart, Calendar, Star, MapPin, Phone, line, Clock, CheckCircle2 } from 'lucide-react';
+import { Scissors, Sparkles, Heart, Calendar, Star, MapPin, Phone, MessageCircle, Clock, CheckCircle2 } from 'lucide-react';
 
 export default function App() {
   const [formData, setFormData] = useState({
@@ -89,7 +89,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+      <nav className="fixed top-0 w-full bg-white/70 border-b border-white/20 backdrop-blur-xl backdrop-blur-sm shadow-sm z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2 text-2xl font-bold">
@@ -118,7 +118,7 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="pt-16 min-h-screen relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#ffd6ec,transparent_30%),radial-gradient(circle_at_bottom_right,#dbeafe,transparent_30%),linear-gradient(to_bottom_right,#fff1f2,#faf5ff,#eff6ff)]"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -179,7 +179,7 @@ export default function App() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-8 hover:shadow-xl transition transform hover:-translate-y-2">
+              <div key={index} className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-8 hover:shadow-xl transition transform hover:-translate-y-2 hover:rotate-1 duration-300">
                 <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 text-pink-500">
                   {service.icon}
                 </div>
@@ -318,7 +318,7 @@ export default function App() {
                   <option value="">เลือกบริการ</option>
                   <option value="bath">อาบน้ำ - ตัดเล็บ</option>
                   <option value="grooming">อาบน้ำ - ไถขนสั้น</option>
-                  <option value="spa">อาบน้ำ - ตัดขนสั้น</option>
+                  <option value="spa">อาบน้ำ - ตัดขนทรงสวย</option>
                 </select>
               </div>
             </div>
@@ -415,7 +415,7 @@ export default function App() {
                   096-137-2568 , 091-8046068
                 </li>
                 <li className="flex items-center gap-2">
-                  <Line className="w-4 h-4" />
+                  <MessageCircle className="w-4 h-4" />
                   @Groomingspa
                 </li>
                 <li className="flex items-center gap-2">
@@ -431,6 +431,42 @@ export default function App() {
           </div>
         </div>
       </footer>
+      {/* Floating Buttons */}
+<div className="fixed bottom-6 right-6 z-50 flex flex-col gap-4">
+
+  {/* LINE */}
+  <a
+    href="https://line.me/ti/p/@Groomingspa"
+    target="_blank"
+    className="w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-xl hover:scale-110 transition"
+  >
+    <MessageCircle className="text-white w-7 h-7" />
+  </a>
+
+  {/* Facebook */}
+  <a
+    href="https://www.facebook.com/happycatspagrooming"
+    target="_blank"
+    className="w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center shadow-xl hover:scale-110 transition"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="white"
+      viewBox="0 0 24 24"
+      className="w-7 h-7"
+    >
+      <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.17 8.44 9.94v-7.03H7.9v-2.91h2.54V9.84c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.77l-.44 2.91h-2.33V22c4.78-.77 8.44-4.92 8.44-9.94z"/>
+    </svg>
+  </a>
+
+  {/* Phone */}
+  <a
+    href="tel:0961372568"
+    className="w-14 h-14 rounded-full bg-pink-500 flex items-center justify-center shadow-xl hover:scale-110 transition"
+  >
+    <Phone className="text-white w-7 h-7" />
+  </a>
+</div>
     </div>
   );
 }
