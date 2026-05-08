@@ -165,8 +165,13 @@ const scrollToSection = (id: string) => {
     ))}
   </div>
 </div>
-      {/* Hero Section */}
-      <section className="pt-16 min-h-screen relative overflow-hidden">
+
+</div>
+</div>
+</nav>
+
+{/* Hero Section */}
+<section className="pt-16 min-h-screen relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#ffd6ec,transparent_30%),radial-gradient(circle_at_bottom_right,#dbeafe,transparent_30%),linear-gradient(to_bottom_right,#fff1f2,#faf5ff,#eff6ff)]"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
           <div className="grid md:grid-cols-2 gap-12 items-center">
