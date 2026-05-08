@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Scissors, Sparkles, Heart, Calendar, Star, MapPin, Phone, Mail, Clock, CheckCircle2 } from 'lucide-react';
+import { Scissors, Sparkles, Heart, Calendar, Star, MapPin, Phone, line, Clock, CheckCircle2 } from 'lucide-react';
 
 export default function App() {
   const [formData, setFormData] = useState({
