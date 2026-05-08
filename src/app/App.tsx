@@ -16,22 +16,22 @@ export default function App() {
   const services = [
     {
       icon: <Sparkles className="w-8 h-8" />,
-      title: 'อาบน้ำ-ตัดเล็บ',
-      price: 'เริ่มต้น 250 บาท',
+      title: 'อาบน้ำ - ตัดเล็บ',
+      price: 'เริ่มต้น 200 บาท',
       description: 'บริการอาบน้ำพร้อมแชมพูคุณภาพ แปรงขน ตัดเล็บ และทำความสะอาดหู',
       features: ['แชมพูออร์แกนิค', 'ตัดเล็บและขัด', 'ทำความสะอาดหู', 'ขูดขน']
     },
     {
-      icon: <Scissors className="w-8 h-8" />,
-      title: 'ตัดขนทรงสวย',
-      price: 'เริ่มต้น 450 บาท',
+      icon: <Heart className="w-8 h-8" />,
+      title: 'อาบน้ำ - ไถขนสั้น',
+      price: 'เริ่มต้น 400 บาท',
       description: 'บริการตัดขนแบบครบวงจร ทั้งอาบน้ำและตัดทรงตามสายพันธุ์',
-      features: ['อาบน้ำ-แปรงขน', 'ตัดทรงตามสายพันธุ์', 'ตัดเล็บ', 'แปรงฟัน']
+      features: ['อาบน้ำ-แปรงขน', 'ตัดทรงตามสายพันธุ์', 'ตัดเล็บ', 'ไถเท้า']
     },
     {
-      icon: <Heart className="w-8 h-8" />,
-      title: 'สปาพรีเมียม',
-      price: 'เริ่มต้น 690 บาท',
+      icon: <Scissors className="w-8 h-8" />,
+      title: 'อาบน้ำ - ตัดขนทรงสวย',
+      price: 'เริ่มต้น 500 บาท',
       description: 'บริการสปาระดับพรีเมียม ดูแลน้องๆอย่างครบครัน',
       features: ['บริการทั้งหมด', 'สปาอุ้งเท้า', 'ทรีทเม้นท์ใบหน้า', 'อโรมาเธอราพี']
     }
@@ -316,9 +316,9 @@ export default function App() {
                   className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-pink-500 focus:outline-none transition"
                 >
                   <option value="">เลือกบริการ</option>
-                  <option value="bath">อาบน้ำ-ตัดเล็บ</option>
-                  <option value="grooming">ตัดขนทรงสวย</option>
-                  <option value="spa">สปาพรีเมียม</option>
+                  <option value="bath">อาบน้ำ - ตัดเล็บ</option>
+                  <option value="grooming">อาบน้ำ - ไถขนสั้น</option>
+                  <option value="spa">อาบน้ำ - ตัดขนสั้น</option>
                 </select>
               </div>
             </div>
@@ -343,11 +343,11 @@ export default function App() {
                   className="w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-pink-500 focus:outline-none transition"
                 >
                   <option value="">เลือกเวลา</option>
-                  <option value="9am">09:00 น.</option>
-                  <option value="11am">11:00 น.</option>
-                  <option value="1pm">13:00 น.</option>
-                  <option value="3pm">15:00 น.</option>
-                  <option value="5pm">17:00 น.</option>
+                  <option value="10am">10:00 น.</option>
+                  <option value="12am">12:00 น.</option>
+                  <option value="2pm">14:00 น.</option>
+                  <option value="4pm">16:00 น.</option>
+                  <option value="6pm">18:00 น.</option>
                 </select>
               </div>
             </div>
@@ -402,15 +402,7 @@ export default function App() {
               <ul className="space-y-2 text-gray-400">
                 <li className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />
-                  จันทร์-ศุกร์: 09:00-18:00
-                </li>
-                <li className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  เสาร์: 10:00-17:00
-                </li>
-                <li className="flex items-center gap-2">
-                  <Clock className="w-4 h-4" />
-                  อาทิตย์: ปิดทำการ
+                  จันทร์-อาทิตย์: 10:00-21:00
                 </li>
               </ul>
             </div>
@@ -420,15 +412,15 @@ export default function App() {
               <ul className="space-y-2 text-gray-400">
                 <li className="flex items-center gap-2">
                   <Phone className="w-4 h-4" />
-                  082-XXX-XXXX
+                  096-137-2568 , 091-8046068
                 </li>
                 <li className="flex items-center gap-2">
-                  <Mail className="w-4 h-4" />
-                  happyspa@example.com
+                  <Line className="w-4 h-4" />
+                  @Groomingspa
                 </li>
                 <li className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
-                  กรุงเทพฯ ประเทศไทย
+                  308 Tha Kham 28 Alley, Samae Dam, Bang Khun Thian, Bangkok 10150
                 </li>
               </ul>
             </div>
