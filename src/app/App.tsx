@@ -278,7 +278,7 @@ const scrollToSection = (id: string) => {
           className="fb-page"
           data-href="https://www.facebook.com/Happygroomingspa/"
           data-tabs="timeline"
-          data-width="500"
+          data-width="1300"
           data-height="750"
           data-small-header="false"
           data-adapt-container-width="true"
