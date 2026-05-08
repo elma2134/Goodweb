@@ -101,6 +101,15 @@ export default function App() {
     alert('เกิดข้อผิดพลาด กรุณาลองใหม่');
   }
 };
+const [activeMenu, setActiveMenu] = useState('booking');
+
+const menus = [
+  { id: 'services', label: 'บริการ' },
+  { id: 'gallery', label: 'ผลงาน' },
+  { id: 'testimonials', label: 'รีวิว' },
+  { id: 'booking', label: 'จองคิว' },
+];
+```
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -118,23 +127,46 @@ export default function App() {
                 Happy Spa Grooming Dog&Cat
               </span>
             </div>
-            <div className="hidden md:flex gap-8">
-              <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-pink-500 transition">
-                บริการ
-              </button>
-              <button onClick={() => scrollToSection('gallery')} className="text-gray-700 hover:text-pink-500 transition">
-                ผลงาน
-              </button>
-              <button onClick={() => scrollToSection('testimonials')} className="text-gray-700 hover:text-pink-500 transition">
-                รีวิว
-              </button>
-              <button onClick={() => scrollToSection('booking')} className="bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-600 transition">
-                จองคิว
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
+            ```tsx
+<div className="hidden md:flex">
+  <div className="relative flex items-center bg-white/80 backdrop-blur-xl p-2 rounded-full shadow-lg border border-pink-100">
+
+    {/* Animated Background */}
+    <div
+      className="absolute top-2 bottom-2 rounded-full bg-gradient-to-r from-pink-500 to-pink-400 transition-all duration-300 ease-in-out shadow-md"
+      style={{
+        width: '110px',
+        left:
+          activeMenu === 'services'
+            ? '8px'
+            : activeMenu === 'gallery'
+            ? '118px'
+            : activeMenu === 'testimonials'
+            ? '228px'
+            : '338px',
+      }}
+    />
+
+    {menus.map((menu) => (
+      <button
+        key={menu.id}
+        onClick={() => {
+          setActiveMenu(menu.id);
+          scrollToSection(menu.id);
+        }}
+        className={`relative z-10 w-[110px] py-3 rounded-full font-semibold transition-all duration-300 ${
+          activeMenu === menu.id
+            ? 'text-white'
+            : 'text-gray-700 hover:text-pink-500'
+        }`}
+      >
+        {menu.label}
+      </button>
+    ))}
+  </div>
+</div>
+```
+
 
       {/* Hero Section */}
       <section className="pt-16 min-h-screen relative overflow-hidden">
