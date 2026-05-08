@@ -254,27 +254,51 @@ const scrollToSection = (id: string) => {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section id="gallery" className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">ผลงานของเรา</h2>
-            <p className="text-xl text-gray-600">ชมความน่ารักของน้องๆหลังอาบน้ำตัดขน</p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {galleryImages.map((image, index) => (
-              <div key={index} className="relative overflow-hidden rounded-2xl group">
-                <img
-                  src={image}
-                  alt={`Groomed pet ${index + 1}`}
-                  className="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition"></div>
-              </div>
-            ))}
-          </div>
+     {/* Facebook Section */}
+<section
+  id="gallery"
+  className="py-20 bg-gradient-to-br from-purple-50 to-pink-50"
+>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        ติดตามผลงานล่าสุด
+      </h2>
+
+      <p className="text-xl text-gray-600">
+        อัปเดตผลงาน รีวิว และโปรโมชั่นผ่าน Facebook Page
+      </p>
+    </div>
+
+    <div className="flex justify-center">
+      <div className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden p-4">
+        
+        <div
+          className="fb-page w-full"
+          data-href="https://www.facebook.com/happycatspagrooming"
+          data-tabs="timeline"
+          data-width="1000"
+          data-height="700"
+          data-small-header="false"
+          data-adapt-container-width="true"
+          data-hide-cover="false"
+          data-show-facepile="true"
+        >
+          <blockquote
+            cite="https://www.facebook.com/happycatspagrooming"
+            className="fb-xfbml-parse-ignore"
+          >
+            <a href="https://www.facebook.com/happycatspagrooming">
+              Happy Cat Spa Grooming
+            </a>
+          </blockquote>
         </div>
-      </section>
+
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20 bg-white">
