@@ -127,6 +127,7 @@ const scrollToSection = (id: string) => {
                 Happy Spa Grooming Dog&Cat
               </span>
             </div>
+
 <div className="hidden md:flex">
   <div className="relative flex items-center bg-white/80 backdrop-blur-xl p-2 rounded-full shadow-lg border border-pink-100">
 
@@ -164,7 +165,6 @@ const scrollToSection = (id: string) => {
     ))}
   </div>
 </div>
-
       {/* Hero Section */}
       <section className="pt-16 min-h-screen relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#ffd6ec,transparent_30%),radial-gradient(circle_at_bottom_right,#dbeafe,transparent_30%),linear-gradient(to_bottom_right,#fff1f2,#faf5ff,#eff6ff)]"></div>
