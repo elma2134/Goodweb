@@ -12,7 +12,16 @@ export default function App() {
     phone: ''
   });
   const [showSuccess, setShowSuccess] = useState(false);
+  
+const [activeMenu, setActiveMenu] = useState('booking');
 
+  const menus = [
+  { id: 'services', label: 'บริการ' },
+  { id: 'gallery', label: 'ผลงาน' },
+  { id: 'testimonials', label: 'รีวิว' },
+  { id: 'booking', label: 'จองคิว' },
+];
+  
   const services = [
     {
       icon: <Sparkles className="w-8 h-8" />,
@@ -101,17 +110,8 @@ export default function App() {
     alert('เกิดข้อผิดพลาด กรุณาลองใหม่');
   }
 };
-const [activeMenu, setActiveMenu] = useState('booking');
 
-const menus = [
-  { id: 'services', label: 'บริการ' },
-  { id: 'gallery', label: 'ผลงาน' },
-  { id: 'testimonials', label: 'รีวิว' },
-  { id: 'booking', label: 'จองคิว' },
-];
-```
-
-  const scrollToSection = (id: string) => {
+const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
