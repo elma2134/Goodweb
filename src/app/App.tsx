@@ -67,10 +67,25 @@ export default function App() {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    await fetch(
+      'https://script.google.com/macros/s/AKfycbylTNqayvJz_pXdaGrO4khfzGjms3zk8AVItYQMZP7iJPQaLgMeRd6V5TIplkg-ajC5/exec',
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      }
+    );
+
     setShowSuccess(true);
+
     setTimeout(() => setShowSuccess(false), 5000);
+
     setFormData({
       ownerName: '',
       petName: '',
@@ -80,7 +95,12 @@ export default function App() {
       time: '',
       phone: ''
     });
-  };
+
+  } catch (error) {
+    console.error(error);
+    alert('เกิดข้อผิดพลาด กรุณาลองใหม่');
+  }
+};
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
