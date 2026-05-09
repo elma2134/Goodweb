@@ -382,7 +382,7 @@ const scrollToSection = (id: string) => {
         <div className="flex-1 overflow-hidden rounded-[28px] bg-black">
 
           <iframe
-            src="https://www.tiktok.com/embed/@happygroomingspa"
+            src="https://www.tiktok.com/embed/@happygroomingspacatdog"
             className="w-full h-full"
             allowFullScreen
           />
@@ -666,7 +666,7 @@ const scrollToSection = (id: string) => {
 
   {/* TikTok */}
 <a
-  href="https://www.tiktok.com/@happygroomingspa"
+  href="https://www.tiktok.com/@happygroomingspacatdog"
   target="_blank"
   className="w-14 h-14 rounded-full bg-black flex items-center justify-center shadow-xl hover:scale-110 transition"
 >
