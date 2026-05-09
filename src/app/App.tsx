@@ -268,26 +268,30 @@ const scrollToSection = (id: string) => {
       </h2>
 
       <p className="text-xl text-gray-600">
-        ดูผลงาน รีวิว และอัปเดตล่าสุดจาก Facebook & TikTok
+        รีวิว ผลงาน และคลิปล่าสุดจาก Facebook & TikTok
       </p>
     </div>
 
     {/* 2 COLUMN */}
-    <div className="grid lg:grid-cols-2 gap-8">
+    <div className="grid lg:grid-cols-2 gap-8 items-stretch">
 
       {/* FACEBOOK */}
-      <div className="
+      <div
+        className="
+        h-[820px]
         bg-white/90
         backdrop-blur-xl
         rounded-[36px]
         shadow-[0_20px_80px_rgba(0,0,0,0.12)]
         border border-pink-100
         overflow-hidden
-        p-3 md:p-6
-      ">
-
+        p-4 md:p-6
+        flex flex-col
+      "
+      >
+        {/* Header */}
         <div className="flex items-center gap-3 mb-5">
-          <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center">
+          <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="white"
@@ -309,14 +313,15 @@ const scrollToSection = (id: string) => {
           </div>
         </div>
 
-        <div className="overflow-hidden rounded-[28px]">
+        {/* Content */}
+        <div className="flex-1 overflow-hidden rounded-[28px]">
 
           <div
             className="fb-page w-full"
             data-href="https://www.facebook.com/Happygroomingspa/"
             data-tabs="timeline"
-            data-width="500"
-            data-height="700"
+            data-width="550"
+            data-height="720"
             data-small-header="false"
             data-adapt-container-width="true"
             data-hide-cover="false"
@@ -336,18 +341,22 @@ const scrollToSection = (id: string) => {
       </div>
 
       {/* TIKTOK */}
-      <div className="
+      <div
+        className="
+        h-[820px]
         bg-white/90
         backdrop-blur-xl
         rounded-[36px]
         shadow-[0_20px_80px_rgba(0,0,0,0.12)]
         border border-pink-100
         overflow-hidden
-        p-3 md:p-6
-      ">
-
+        p-4 md:p-6
+        flex flex-col
+      "
+      >
+        {/* Header */}
         <div className="flex items-center gap-3 mb-5">
-          <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center">
+          <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center shrink-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="white"
@@ -364,17 +373,17 @@ const scrollToSection = (id: string) => {
             </h3>
 
             <p className="text-gray-500">
-              คลิปอาบน้ำตัดขนน่ารักๆ
+              คลิปน้องๆล่าสุด
             </p>
           </div>
         </div>
 
-        {/* TikTok Embed */}
-        <div className="rounded-[28px] overflow-hidden bg-black min-h-[700px] flex items-center justify-center">
+        {/* Content */}
+        <div className="flex-1 overflow-hidden rounded-[28px] bg-black">
 
           <iframe
-            src="https://www.tiktok.com/embed/@happygroomingspacatdog"
-            className="w-full h-[700px]"
+            src="https://www.tiktok.com/embed/@happygroomingspa"
+            className="w-full h-full"
             allowFullScreen
           />
 
@@ -400,13 +409,19 @@ const scrollToSection = (id: string) => {
       border: none;
     }
 
-    @media (max-width: 768px) {
-      .fb-page {
-        min-height: 500px;
+    @media (max-width: 1024px) {
+      .h-\\[820px\\] {
+        height: auto;
       }
 
       iframe {
-        height: 600px !important;
+        min-height: 700px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        min-height: 600px;
       }
     }
   `}</style>
