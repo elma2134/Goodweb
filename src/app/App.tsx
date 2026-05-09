@@ -664,6 +664,22 @@ const scrollToSection = (id: string) => {
     </svg>
   </a>
 
+  {/* TikTok */}
+<a
+  href="https://www.tiktok.com/@happygroomingspa"
+  target="_blank"
+  className="w-14 h-14 rounded-full bg-black flex items-center justify-center shadow-xl hover:scale-110 transition"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="white"
+    className="w-7 h-7"
+  >
+    <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.1v13.4a2.62 2.62 0 1 1-2.62-2.62c.2 0 .39.02.58.06V9.67a5.76 5.76 0 1 0 5.14 5.73V8.53a7.9 7.9 0 0 0 4.6 1.47V6.9c-.28 0-.55-.07-.83-.21z"/>
+  </svg>
+</a>
+
   {/* Phone */}
   <a
     href="tel:0961372568"
