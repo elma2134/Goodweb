@@ -254,7 +254,7 @@ const scrollToSection = (id: string) => {
         </div>
       </section>
 
-    {/* Facebook Latest Posts */}
+   {/* Facebook + TikTok */}
 <section
   id="gallery"
   className="py-20 bg-gradient-to-br from-purple-50 to-pink-50 overflow-hidden"
@@ -268,16 +268,15 @@ const scrollToSection = (id: string) => {
       </h2>
 
       <p className="text-xl text-gray-600">
-        ดูผลงาน รีวิว และอัปเดตล่าสุดจาก Facebook Page
+        ดูผลงาน รีวิว และอัปเดตล่าสุดจาก Facebook & TikTok
       </p>
     </div>
 
-    {/* CARD */}
-    <div className="flex justify-center">
+    {/* 2 COLUMN */}
+    <div className="grid lg:grid-cols-2 gap-8">
 
+      {/* FACEBOOK */}
       <div className="
-        w-full
-        max-w-[1200px]
         bg-white/90
         backdrop-blur-xl
         rounded-[36px]
@@ -287,45 +286,105 @@ const scrollToSection = (id: string) => {
         p-3 md:p-6
       ">
 
-        {/* Responsive Facebook */}
-        <div className="w-full overflow-hidden rounded-[28px]">
-
-          <div className="flex justify-center">
-
-            <div
-              className="
-                fb-page
-                w-full
-              "
-              data-href="https://www.facebook.com/Happygroomingspa/"
-              data-tabs="timeline"
-              data-width="1200"
-              data-height="720"
-              data-small-header="false"
-              data-adapt-container-width="true"
-              data-hide-cover="false"
-              data-show-facepile="true"
+        <div className="flex items-center gap-3 mb-5">
+          <div className="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              viewBox="0 0 24 24"
+              className="w-6 h-6"
             >
-              <blockquote
-                cite="https://www.facebook.com/Happygroomingspa/"
-                className="fb-xfbml-parse-ignore"
-              >
-                <a href="https://www.facebook.com/Happygroomingspa/">
-                  Happy Cat Spa Grooming
-                </a>
-              </blockquote>
-            </div>
+              <path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.17 8.44 9.94v-7.03H7.9v-2.91h2.54V9.84c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.77l-.44 2.91h-2.33V22c4.78-.77 8.44-4.92 8.44-9.94z"/>
+            </svg>
+          </div>
 
+          <div>
+            <h3 className="text-2xl font-bold">
+              Facebook Page
+            </h3>
+
+            <p className="text-gray-500">
+              รีวิวและผลงานล่าสุด
+            </p>
+          </div>
+        </div>
+
+        <div className="overflow-hidden rounded-[28px]">
+
+          <div
+            className="fb-page w-full"
+            data-href="https://www.facebook.com/Happygroomingspa/"
+            data-tabs="timeline"
+            data-width="500"
+            data-height="700"
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
+          >
+            <blockquote
+              cite="https://www.facebook.com/Happygroomingspa/"
+              className="fb-xfbml-parse-ignore"
+            >
+              <a href="https://www.facebook.com/Happygroomingspa/">
+                Happy Grooming Spa
+              </a>
+            </blockquote>
           </div>
 
         </div>
+      </div>
 
+      {/* TIKTOK */}
+      <div className="
+        bg-white/90
+        backdrop-blur-xl
+        rounded-[36px]
+        shadow-[0_20px_80px_rgba(0,0,0,0.12)]
+        border border-pink-100
+        overflow-hidden
+        p-3 md:p-6
+      ">
+
+        <div className="flex items-center gap-3 mb-5">
+          <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="white"
+              viewBox="0 0 24 24"
+              className="w-6 h-6"
+            >
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.1v13.4a2.62 2.62 0 1 1-2.62-2.62c.2 0 .39.02.58.06V9.67a5.76 5.76 0 1 0 5.14 5.73V8.53a7.9 7.9 0 0 0 4.6 1.47V6.9c-.28 0-.55-.07-.83-.21z"/>
+            </svg>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-bold">
+              TikTok
+            </h3>
+
+            <p className="text-gray-500">
+              คลิปอาบน้ำตัดขนน่ารักๆ
+            </p>
+          </div>
+        </div>
+
+        {/* TikTok Embed */}
+        <div className="rounded-[28px] overflow-hidden bg-black min-h-[700px] flex items-center justify-center">
+
+          <iframe
+            src="https://www.tiktok.com/embed/@happygroomingspacatdog"
+            className="w-full h-[700px]"
+            allowFullScreen
+          />
+
+        </div>
       </div>
 
     </div>
   </div>
 
-  {/* FIX FACEBOOK RESPONSIVE */}
+  {/* Responsive */}
   <style jsx>{`
     .fb-page,
     .fb-page span,
@@ -337,15 +396,17 @@ const scrollToSection = (id: string) => {
       border-radius: 24px;
     }
 
+    iframe {
+      border: none;
+    }
+
     @media (max-width: 768px) {
       .fb-page {
         min-height: 500px;
       }
-    }
 
-    @media (min-width: 1024px) {
-      .fb-page {
-        max-width: 1100px;
+      iframe {
+        height: 600px !important;
       }
     }
   `}</style>
