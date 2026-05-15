@@ -278,7 +278,7 @@ const scrollToSection = (id: string) => {
       {/* FACEBOOK */}
       <div
         className="
-        h-[820px]
+        h-[600px]
         bg-white/90
         backdrop-blur-xl
         rounded-[36px]
@@ -343,7 +343,7 @@ const scrollToSection = (id: string) => {
       {/* TIKTOK */}
       <div
         className="
-        h-[820px]
+        h-[600px]
         bg-white/90
         backdrop-blur-xl
         rounded-[36px]
